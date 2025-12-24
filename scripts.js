@@ -39,7 +39,7 @@ const expression = document.querySelector("#expression");
 // --------------------------------------------- UPDATE ------------------------------------------------
 
 const update = (event) => {
-
+    
     if (state.error)  clear();
     
     const {number, operator, function: func} = event.target.dataset;
@@ -89,6 +89,20 @@ const handleFunction = (func) =>{
             return;
     }
 };                
+
+
+
+const handleKeyboard = (event) =>{
+    const key = event.key;
+    if((key >= 0 && key <= 9) || key === '.') handleNumber(key);
+    else if(key === 'Escape') clear();
+    else if(key === 'Backspace') del();
+    else if(key === '=' || key === 'Enter') equate();
+    else if(event.altKey && (key === '-' || key === '+')) toggleSign();
+    else handleOperator(key);
+
+    render();
+};
                 
 // --------------------------------------------- CORE ------------------------------------------------
 
@@ -138,4 +152,5 @@ const render = () => {
 
 // --------------------------------------------- EXECUTE ------------------------------------------------
 
-buttonsContainer.addEventListener('click', update)
+buttonsContainer.addEventListener('click', update);
+window.addEventListener('keydown', handleKeyboard);
