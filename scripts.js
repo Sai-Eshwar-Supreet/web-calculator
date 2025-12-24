@@ -93,6 +93,9 @@ const handleFunction = (func) =>{
 
 
 const handleKeyboard = (event) =>{
+
+    if(state.error) clear();
+
     const key = event.key;
     if((key >= 0 && key <= 9) || key === '.') handleNumber(key);
     else if(key === 'Escape') clear();
