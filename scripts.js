@@ -5,7 +5,7 @@ const validateResponse = (result) => Number.isNaN(result) ? { status:false, resu
 const OPERATIONS = {
     '+' : (a, b) => validateResponse(a + b),
     '-' : (a, b) => validateResponse(a - b),
-    'X' : (a, b) => validateResponse(a * b),
+    '*' : (a, b) => validateResponse(a * b),
     '/' : (a, b) => {
         return (b === 0) ? {
             status: false,
