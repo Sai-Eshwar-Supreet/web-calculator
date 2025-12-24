@@ -1,7 +1,8 @@
 # web-calculator
 
 A browser-based calculator built with **vanilla HTML, CSS, and JavaScript**.  
-The app supports both mouse and keyboard input, handles common arithmetic operations, and manages edge cases through explicit state-driven logic — all without external libraries.
+This project focusses on **explicit state management** using js objects, **predictable UI behavior**, and **clear separation between logic and presentation**.
+
 
 ## Live Demo
 
