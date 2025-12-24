@@ -55,9 +55,17 @@ main{
     text-align: right;
 }
 
+#expression, #display{
+    height: 32px;
+}
+
 #expression{
+    font-size: 16px;
+    color: #405064;
+}
+
+#display{
     font-size: 32px;
-    margin-bottom: 8px;
 }
 
 .button-container{
