@@ -68,8 +68,10 @@ const handleOperator = (op) => {
         if(state.error) return;
     }
     
-    if(state.display !== null) state.operand1 = Number(state.display);
-    state.operator = op;
+    if(state.display !== null){
+        state.operand1 = Number(state.display);
+        state.operator = op;
+    }
     state.display = null;
 };
 
